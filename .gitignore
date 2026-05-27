@@ -1,0 +1,30 @@
+# Unreal build outputs
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+
+# Visual Studio / Rider / IDE files
+.vs/
+.vscode/
+.idea/
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sdf
+*.opensdf
+
+# Build and debug artifacts
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+*.exe
+*.log
+
+# OS files
+Thumbs.db
+.DS_Store

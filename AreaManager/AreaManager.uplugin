@@ -1,0 +1,28 @@
+﻿{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Simple Area Manager",
+	"Description": "Support 'Area Management System' and 'PIE Widgets'",
+	"Category": "Made by Youllee",
+	"CreatedBy": "Youllee",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "5.7.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "AreaManager",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "AreaManagerEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}
