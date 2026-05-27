@@ -3,27 +3,66 @@ Binaries/
 Intermediate/
 Saved/
 DerivedDataCache/
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+Plugins/**/Saved/
+Plugins/**/DerivedDataCache/
+
+# Generated Unreal project files
+*.xcodeproj
+*.xcworkspace
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+.vsconfig
 
 # Visual Studio / Rider / IDE files
 .vs/
 .vscode/
 .idea/
-*.sln
-*.suo
 *.user
 *.userosscache
-*.sdf
-*.opensdf
+
+# Compiled object files
+*.slo
+*.lo
+*.o
+*.obj
+*.gch
+*.pch
 
 # Build and debug artifacts
-*.obj
-*.pdb
+*.so
+*.dylib
+*.dll
+*.lai
+*.la
+*.a
+*.lib
+*.exe
+*.out
+*.app
+*.ipa
 *.ilk
 *.exp
-*.lib
-*.dll
-*.exe
+*.pdb
 *.log
+
+# Builds
+Build/
+!Build/
+Build/**
+!Build/**/
+!Build/**/*.ico
+!Build/**/PakBlacklist*.txt
+
+# Source art and generated map data
+SourceArt/**/*.png
+SourceArt/**/*.tga
+*_BuiltData.uasset
 
 # OS files
 Thumbs.db
