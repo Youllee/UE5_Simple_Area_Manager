@@ -2,6 +2,7 @@
 #include "Editor.h"
 #include "Engine/Engine.h"
 #include "Engine/World.h"
+#include "LevelEditorViewport.h"
 
 void UAreaManagerEditorSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
