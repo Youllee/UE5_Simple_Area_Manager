@@ -19,7 +19,7 @@ Area Actor와 Volume을 기반으로 플레이어/멤버 Actor의 현재 Area를
 - Area Volume을 미니맵에 표시하기 위한 위치, 크기, 회전값 반환
 - Area Actor 선택 시 연결 관계와 Volume 영역을 보여주는 Editor Visualizer 제공
 - PIE 상태와 에디터 맵 로드 이벤트를 Blueprint에서 사용할 수 있는 Editor Subsystem 제공
-- Editor Utility Widget 기반의 Area Manager / Viewer / Minimap 예제 제공
+- Editor Utility Widget 기반의 Area Manager / Viewer / Editor Minimap / PIE Minimap 예제 제공
 - 샘플 콘텐츠 포함 버전과 기본 플러그인 버전 제공
 
 ---
@@ -118,6 +118,41 @@ Blueprint에서는 다음 함수를 사용할 수 있습니다.
 
 ## Editor Tools
 
+### UI Content Overview
+
+#### Editor Utility Widget
+
+| Asset | Description |
+| --- | --- |
+| `EUW_AreaManager` | 최상위 Editor Utility Widget입니다. |
+| `EUW_AreaManager_Viewer` | Editor / PIE 전환과 레벨 변경 이벤트를 감지하고, 필요한 위젯을 활성화하는 관리자 Widget입니다. |
+| `EUW_AreaManager_EditorMinimap` | Editor 모드 전용 미니맵입니다. 전체 Area 배치 현황과 활성 Viewport Camera 위치를 표시합니다. |
+
+#### User Widget
+
+| Asset | Description |
+| --- | --- |
+| `WB_AreaManager_Base` | AreaManager 플러그인 전용 위젯 템플릿입니다. Set / Reset / Clear / Draw / Refresh 함수를 제공합니다. |
+| `WB_AreaManager_PIEMinimap` | PIE 모드 전용 미니맵입니다. 현재 Player가 속한 Area를 기준으로 연결된 Area와 내부 Member를 표시합니다. |
+| `WB_AreaManager_AreaVolume` | Area 내 Volume 배치도를 시각화합니다. |
+| `WB_AreaManager_Icon_EditorCamera` | 활성화된 Viewport Camera 위치를 표시하는 아이콘입니다. |
+| `WB_AreaManager_Icon_Player` | 플레이어 위치 표시용 아이콘입니다. 매 Tick마다 위치가 갱신됩니다. |
+| `WB_AreaManager_Icon_Pawn` | Pawn 또는 NPC 위치 표시용 아이콘입니다. |
+| `WB_AreaManager_Icon_Member` | Member 위치 표시용 기본 아이콘입니다. |
+
+#### Blueprint
+
+| Asset | Description |
+| --- | --- |
+| `BP_AreaManager_FunctionLibrary` | 위젯 Pool 함수를 제공합니다. |
+
+#### Material
+
+| Asset | Description |
+| --- | --- |
+| `UIM_AreaManager_Outline` | 외곽선 표시용 UI 머티리얼입니다. |
+| `UIMI_AreaManager_Outline_Area` | Area 영역 표시용 UI 머티리얼 인스턴스입니다. |
+
 ### Area Manager Window
 
 Toolbar 또는 Window 메뉴에서 `AreaManager`를 실행할 수 있습니다.
@@ -139,6 +174,20 @@ Viewport에서 `AreaManagerAreaActor`를 선택하면 다음 정보를 시각적
 `AreaManagerAreaActor`에는 에디터에서 실행할 수 있는 `Collect Connected Areas` 함수가 있습니다.
 
 이 함수는 Volume 경계가 겹치는 Area를 찾아 `ConnectedAreas`에 추가합니다. 기존 연결은 유지되며, 개발자가 수동으로 구성한 연결을 덮어쓰지 않습니다.
+
+---
+
+## Screenshots
+
+### Editor Visualizer
+
+![Editor Visualizer Selection](Docs/AreaManager_Editor_Visualizer_Seclection.png)
+
+![Editor Visualizer Selection 2](Docs/AreaManager_Edutor_Visualizer_Selection2.png)
+
+### PIE Minimap
+
+![PIE Connected Areas](Docs/AreaManager_PIE_Connected.png)
 
 ---
 
