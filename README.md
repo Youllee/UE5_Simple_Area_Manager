@@ -1,4 +1,4 @@
-# UE5 Simple Area Manager
+﻿# UE5 Simple Area Manager
 
 > Built as a lightweight area management plugin for Unreal Engine 5.
 
@@ -20,7 +20,7 @@ Area Actor와 Volume을 기반으로 플레이어/멤버 Actor의 현재 Area를
 - Area Actor 선택 시 연결 관계와 Volume 영역을 보여주는 Editor Visualizer 제공
 - PIE 상태와 에디터 맵 로드 이벤트를 Blueprint에서 사용할 수 있는 Editor Subsystem 제공
 - Editor Utility Widget 기반의 Area Manager / Viewer / Editor Minimap / PIE Minimap 예제 제공
-- 샘플 콘텐츠 포함 버전과 기본 플러그인 버전 제공
+- Git 저장소에는 샘플 콘텐츠가 포함된 대표 버전을 제공하며, Release에서는 샘플 포함 / 샘플 제외 패키지를 별도로 제공
 
 ---
 
@@ -44,14 +44,19 @@ Unreal Engine의 Trigger Volume이나 Collision 이벤트만으로도 이런 기
 
 ## Repository Structure
 
-이 저장소에는 두 가지 버전의 플러그인이 포함되어 있습니다.
+이 저장소에는 샘플 콘텐츠가 포함된 대표 플러그인 버전이 포함되어 있습니다.
 
 | Folder | Description |
 | --- | --- |
-| `AreaManager` | 기본 플러그인 버전입니다. Runtime / Editor 코드와 공통 UI 콘텐츠가 포함되어 있습니다. |
-| `AreaManager_WithSampleContents` | 샘플 맵, 샘플 캐릭터, 샘플 입력, 테스트용 리소스가 포함된 버전입니다. |
+| `AreaManager` | Runtime / Editor 코드, 공통 UI 콘텐츠, 샘플 맵, 샘플 캐릭터, 테스트용 리소스가 포함된 플러그인입니다. |
+| `Docs` | README와 GitHub 페이지에서 사용하는 스크린샷 이미지가 포함되어 있습니다. |
 
-샘플 프로젝트를 바로 확인하고 싶다면 `AreaManager_WithSampleContents`를 사용하는 것을 권장합니다.
+GitHub Release에서는 다음 두 가지 압축 파일을 제공합니다.
+
+| File | Description |
+| --- | --- |
+| `SimpleAreaManager_1.0.zip` | 샘플 콘텐츠가 포함된 버전입니다. 플러그인 기능을 바로 확인하고 싶을 때 사용합니다. |
+| `SimpleAreaManager_1.0_NoSample.zip` | 샘플 맵과 샘플 리소스를 제외한 버전입니다. 기존 프로젝트에 플러그인만 추가하고 싶을 때 사용합니다. |
 
 ---
 
@@ -84,15 +89,15 @@ Blueprint에서는 `EAreaManagerRangeType`을 통해 조회 범위를 선택할 
 
 ## Installation
 
-1. 이 저장소의 최신 릴리즈 또는 Source Code zip을 다운로드합니다.
-2. 프로젝트의 `Plugins` 폴더에 원하는 버전의 플러그인 폴더를 복사합니다.
-   - 기본 버전: `AreaManager`
-   - 샘플 포함 버전: `AreaManager_WithSampleContents`
+1. GitHub Release에서 원하는 압축 파일을 다운로드합니다.
+   - 샘플 포함 버전: `SimpleAreaManager_1.0.zip`
+   - 샘플 제외 버전: `SimpleAreaManager_1.0_NoSample.zip`
+2. 압축을 해제한 뒤 `AreaManager` 폴더를 프로젝트의 `Plugins` 폴더에 복사합니다.
 3. Unreal Editor를 실행합니다.
 4. Plugins 창에서 `Simple Area Manager` 플러그인을 활성화합니다.
 5. 프로젝트를 재시작합니다.
 
-샘플 포함 버전은 `EnhancedInput` 플러그인을 사용합니다.
+샘플 포함 버전은 `EnhancedInput` 플러그인을 사용합니다. 샘플 제외 버전은 샘플 맵과 샘플 리소스, `EnhancedInput` 의존성을 포함하지 않습니다.
 
 ---
 
@@ -224,7 +229,7 @@ Viewport에서 `AreaManagerAreaActor`를 선택하면 다음 정보를 시각적
 - Portfolio project
 - Runtime + Editor plugin
 - Developed with Unreal Engine 5.7
-- Includes optional sample contents
+- Release provides sample and no-sample packages
 - MIT License
 
 ---
