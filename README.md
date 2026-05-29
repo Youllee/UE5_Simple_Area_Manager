@@ -113,17 +113,16 @@ Blueprint에서는 다음 함수를 사용할 수 있습니다.
 
 | Asset | Parent | Description |
 | --- | --- | --- |
-| `EUW_AreaManager` | EditorUtilityWidget | 최상위 Editor Utility Widget입니다. |
-| `EUW_AreaManager_Viewer` | EditorUtilityWidget | Editor / PIE 전환과 레벨 변경 이벤트를 감지하고, 필요한 위젯을 활성화하는 관리자 Widget입니다. |
-| `EUW_AreaManager_EditorMinimap` | EditorUtilityWidget | Editor 모드 전용 미니맵입니다. 전체 Area 배치 현황과 활성 Viewport Camera 위치를 표시합니다. |
-| --- | --- | --- |
-| `WB_AreaManager_Base` | UserWidget | AreaManager 플러그인 전용 위젯 템플릿입니다. Set / Reset / Clear / Draw / Refresh 함수를 제공합니다. |
-| `WB_AreaManager_PIEMinimap` | UserWidget | PIE 모드 전용 미니맵입니다. 현재 Player가 속한 Area를 기준으로 연결된 Area와 내부 Member를 표시합니다. |
-| `WB_AreaManager_AreaVolume` | UserWidget | Area 내 Volume 배치도를 시각화합니다. |
-| `WB_AreaManager_Icon_EditorCamera` | UserWidget | 활성화된 Viewport Camera 위치를 표시하는 아이콘입니다. |
-| `WB_AreaManager_Icon_Player` | UserWidget | 플레이어 위치 표시용 아이콘입니다. |
-| `WB_AreaManager_Icon_Pawn` | UserWidget | Pawn Member 위치 표시용 아이콘입니다. |
-| `WB_AreaManager_Icon_Member` | UserWidget | 기타 Member 위치 표시용 기본 아이콘입니다. |
+| `EUW_AreaManager`| 최상위 Editor Utility Widget입니다. |
+| `EUW_AreaManager_Viewer`| Editor / PIE 전환과 레벨 변경 이벤트를 감지하고, 필요한 위젯을 활성화하는 관리자 Widget입니다. |
+| `EUW_AreaManager_EditorMinimap`| Editor 모드 전용 미니맵입니다. 전체 Area 배치 현황과 활성 Viewport Camera 위치를 표시합니다. |
+| `WB_AreaManager_Base`| AreaManager 플러그인 전용 위젯 템플릿입니다. Set / Reset / Clear / Draw / Refresh 함수를 제공합니다. |
+| `WB_AreaManager_PIEMinimap`| PIE 모드 전용 미니맵입니다. 현재 Player가 속한 Area를 기준으로 연결된 Area와 내부 Member를 표시합니다. |
+| `WB_AreaManager_AreaVolume`| Area 내 Volume 배치도를 시각화합니다. |
+| `WB_AreaManager_Icon_EditorCamera`| 활성화된 Viewport Camera 위치를 표시하는 아이콘입니다. |
+| `WB_AreaManager_Icon_Player` | 플레이어 위치 표시용 아이콘입니다. |
+| `WB_AreaManager_Icon_Pawn` Pawn Member 위치 표시용 아이콘입니다. |
+| `WB_AreaManager_Icon_Member` | 기타 Member 위치 표시용 기본 아이콘입니다. |
 
 #### Blueprint
 
