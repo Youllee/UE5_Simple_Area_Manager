@@ -121,7 +121,7 @@ Blueprint에서는 다음 함수를 사용할 수 있습니다.
 | `WB_AreaManager_AreaVolume`| Area 내 Volume 배치도를 시각화합니다. |
 | `WB_AreaManager_Icon_EditorCamera`| 활성화된 Viewport Camera 위치를 표시하는 아이콘입니다. |
 | `WB_AreaManager_Icon_Player` | 플레이어 위치 표시용 아이콘입니다. |
-| `WB_AreaManager_Icon_Pawn` Pawn Member 위치 표시용 아이콘입니다. |
+| `WB_AreaManager_Icon_Pawn` | Pawn Member 위치 표시용 아이콘입니다. |
 | `WB_AreaManager_Icon_Member` | 기타 Member 위치 표시용 기본 아이콘입니다. |
 
 #### Blueprint
