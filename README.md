@@ -159,9 +159,9 @@ Editor Utility Widget을 통해 Area 관련 에디터 도구와 예제 UI를 확
 
 ### Area Visualizer
 
-![Editor Visualizer Selection](Docs/AreaManager_Editor_Visualizer_Seclection.png)
+![Editor Visualizer Selection](Docs/AreaManager_Editor_Visualizer_Selection.png)
 
-![Editor Visualizer Selection 2](Docs/AreaManager_Edutor_Visualizer_Selection2.png)
+![Editor Visualizer Selection 2](Docs/AreaManager_Editor_Visualizer_Selection2.png)
 
 Viewport에서 `AreaManagerAreaActor`를 선택하면 다음 정보를 시각적으로 확인할 수 있습니다.
 
