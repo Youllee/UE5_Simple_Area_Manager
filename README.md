@@ -4,7 +4,7 @@
 
 ![PIE Connected Areas](Docs/AreaManager_PIE_Connected.png)
 
-'Simple Area Manager'는 간단하게 레벨에 구역(Area)를 설정하고, 구역 내 액터(Member)를 관리하기 위한 Unreal EnGine 5 플러그인입니다.
+'Simple Area Manager'는 간단하게 레벨에 구역(Area)를 설정하고, 구역 내 액터(Member)를 관리하기 위한 Unreal Enㅎine 5 플러그인입니다.
 
 Area Actor는 할당된 Volume Actor를 기반으로 Area 범위를 설정하고,
 
