@@ -2,6 +2,8 @@
 
 > Built as a lightweight area management plugin for Unreal Engine 5.
 
+![PIE Connected Areas](Docs/AreaManager_PIE_Connected.png)
+
 'Simple Area Manager'는 간단하게 레벨에 구역(Area)를 설정하고, 구역 내 액터(Member)를 관리하기 위한 Unreal EnGine 5 플러그인입니다.
 
 Area Actor는 할당된 Volume Actor를 기반으로 Area 범위를 설정하고,
@@ -15,8 +17,6 @@ Area 내/외부로 이동하는 Member Actor(Player/NPC/Other Actors)를 추적,
 ---
 
 ## Features
-
-![PIE Connected Areas](Docs/AreaManager_PIE_Connected.png)
 
 - Area Actor를 이용한 구역 설정 및 관리 시스템 제공
 - Volume Actor를 이용한 Area 범위 설정, Volume Overlap Event 기반의 Member Actor 입출입 관리.
@@ -61,14 +61,14 @@ GitHub Release에서는 다음 두 가지 압축 파일을 제공합니다.
 
 ## Core Classes
 
-| Class | Parent | Role |
-| --- | --- | --- |
-| `AAreaManagerAreaActor` | Actor | Area를 정의하는 Actor입니다. 연결된 Volume에 따라 Area 범위가 설정됩니다. |
-| `UAreaManagerMemberComponent` | ActorComponent | Area에서 추적할 Actor에 추가해야 하는 ActorComponent 입니다. |
-| `UAreaManagerSubsystem` | WorldSubsystem | Area Actor와 Member Actor의 등록 상태를 관리하는 WorldSubsystem입니다. |
-| `UAreaManagerFunctionLibrary` | BlueprintFunctionLibrary | 볼륨의 범위를 Minimap Widget에 표시하기 위한 Transform 계산 함수를 제공합니다. |
-| `UAreaManagerEditorSubsystem` | EditorSubsystem | Editor/PIE 전환 및 맵 로드 등 에디터 이벤트를 제공합니다. |
-| `FAreaManagerVisualizer` | ComponentVisualizer | Area Actor의 배치, 범위, 연결 상태를 Viewport에 표시하기 위한 Visualizer 입니다. |
+| Class| Role |
+| --- | --- |
+| `AAreaManagerAreaActor` | Area를 정의하는 Actor입니다. 연결된 Volume에 따라 Area 범위가 설정됩니다. |
+| `UAreaManagerMemberComponent` | Area에서 추적할 Actor에 추가해야 하는 ActorComponent 입니다. |
+| `UAreaManagerSubsystem` | Area Actor와 Member Actor의 등록 상태를 관리하는 WorldSubsystem입니다. |
+| `UAreaManagerFunctionLibrary` | 볼륨의 범위를 Minimap Widget에 표시하기 위한 Transform 계산 함수를 제공합니다. |
+| `UAreaManagerEditorSubsystem` | Editor/PIE 전환 및 맵 로드 등 에디터 이벤트를 제공합니다. |
+| `FAreaManagerVisualizer` | Area Actor의 배치, 범위, 연결 상태를 Viewport에 표시하기 위한 Visualizer 입니다. |
 
 ---
 
@@ -111,8 +111,8 @@ Blueprint에서는 다음 함수를 사용할 수 있습니다.
 
 ### UI Content Overview
 
-| Asset | Parent | Description |
-| --- | --- | --- |
+| Asset | Description |
+| --- | --- |
 | `EUW_AreaManager`| 최상위 Editor Utility Widget입니다. |
 | `EUW_AreaManager_Viewer`| Editor / PIE 전환과 레벨 변경 이벤트를 감지하고, 필요한 위젯을 활성화하는 관리자 Widget입니다. |
 | `EUW_AreaManager_EditorMinimap`| Editor 모드 전용 미니맵입니다. 전체 Area 배치 현황과 활성 Viewport Camera 위치를 표시합니다. |
@@ -171,9 +171,9 @@ Viewport에서 `AreaManagerAreaActor`를 선택하면 다음 정보를 시각적
 
 기본적으로 Area 간 연결은 사용자가 직접 연결해야 합니다.
 
-하지만 수많은 Area를 하나하나 연결하기는 번거롭기에, 편의성을 위한 `Collect Connected Areas` 함수를 제공합니다.
+하지만 수많은 Area를 하나하나 연결하기는 번거롭기에, `Collect Connected Areas` 함수를 제공합니다.
 
-이 함수는 Area Volume 영역이 겹치는 Area를 모두 찾아 ConnectedAreas에 추가합니다.
+이 함수는 Area Volume의 Bounds 기준으로, 영역이 겹치는 Area들을 모두 찾아 ConnectedAreas에 추가하는 편의기능입니다.
 
 ---
 
@@ -186,7 +186,7 @@ Viewport에서 `AreaManagerAreaActor`를 선택하면 다음 정보를 시각적
 - Editor 환경에서 Area 배치도 확인
 - PIE 환경에서 Area 및 Member 위치 실시간 확인
 - Player가 위치한 Area 기준으로 연출 변화
-- 
+
 ---
 
 ## Notes
