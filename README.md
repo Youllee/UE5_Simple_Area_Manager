@@ -16,6 +16,8 @@ Area 내/외부로 이동하는 Member Actor(Player/NPC/Other Actors)를 추적,
 
 ## Features
 
+![PIE Connected Areas](Docs/AreaManager_PIE_Connected.png)
+
 - Area Actor를 이용한 구역 설정 및 관리 시스템 제공
 - Volume Actor를 이용한 Area 범위 설정, Volume Overlap Event 기반의 Member Actor 입출입 관리.
 - Area 및 Member 등록/해제에 대한 이벤트 제공
@@ -138,17 +140,19 @@ Blueprint에서는 다음 함수를 사용할 수 있습니다.
 
 ### Area Manager Window
 
+![PIE Connected Areas](Docs/AreaManager_BringUpWidget.png)
+
 Toolbar 또는 Window 메뉴에서 `AreaManager`를 실행할 수 있습니다.
 
 Editor Utility Widget을 통해 Area 관련 에디터 도구와 예제 UI를 확인할 수 있습니다.
 
 #### Area Editor Minimap
 
-
+![PIE Connected Areas](Docs/SimpleAreaManager_EditorMinimap.gif)
 
 #### Area PIE Minimap
 
-![PIE Connected Areas](Docs/AreaManager_PIE_Connected.png)
+![PIE Connected Areas](Docs/SimpleAreaManager_PIEMinimap.gif)
 
 ### Area Visualizer
 
@@ -164,6 +168,8 @@ Viewport에서 `AreaManagerAreaActor`를 선택하면 다음 정보를 시각적
 
 ### Collect Connected Areas
 
+![Editor Visualizer Selection 2](Docs/AreaManager_CollectConnectedAreas.png)
+
 기본적으로 Area 간 연결은 사용자가 직접 연결해야 합니다.
 
 하지만 수많은 Area를 하나하나 연결하기는 번거롭기에, 편의성을 위한 `Collect Connected Areas` 함수를 제공합니다.
@@ -174,20 +180,19 @@ Viewport에서 `AreaManagerAreaActor`를 선택하면 다음 정보를 시각적
 
 ## Recommended Use Cases
 
-- 방 단위 던전 구성
-- 전투 구역 진입/이탈 감지
-- 미니맵에 현재 Area와 주변 Area 표시
-- 플레이어가 위치한 Area 기준으로 UI 갱신
-- Area별 NPC 또는 오브젝트 목록 조회
-- 에디터에서 Area 연결 관계를 빠르게 확인하는 도구
-
+- 방 단위 Area 설정
+- Area 진입/이탈 감지
+- Area 연결 상태 확인
+- Area 내 Member Actor 조회
+- Editor 환경에서 Area 배치도 확인
+- PIE 환경에서 Area 및 Member 위치 실시간 확인
+- Player가 위치한 Area 기준으로 연출 변화
+- 
 ---
 
 ## Notes
 
 - `AreaName`은 중복되지 않게 설정하는 것을 권장합니다.
-- Runtime Subsystem은 PIE와 Game World에서 동작합니다.
-- Area Volume은 `AreaManagerAreaActor`에 Attach된 `AVolume`을 기준으로 수집됩니다.
 - 샘플 콘텐츠는 사용 예시를 보여주기 위한 목적으로 포함되어 있습니다.
 
 ---
@@ -196,7 +201,7 @@ Viewport에서 `AreaManagerAreaActor`를 선택하면 다음 정보를 시각적
 
 이 플러그인은 포트폴리오 목적으로 제작되었습니다.
 
-Editor Utility Widget 제작을 위해, 필요한 Area Manager System을 추가하였으며, 그 때문에 Area 관리를 위한 최소한의 기능만을 구현했습니다.
+Editor Utility Widget 제작을 위해 필요한 Area Manager System을 추가하였으며, 그 때문에 AreaManager는 Area 관리를 위해 최소한의 기능만 구현했습니다.
 
 ---
 
